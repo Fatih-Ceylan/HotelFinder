@@ -7,11 +7,13 @@ namespace HotelFinder.DataAccess.Concrete
 {
     public class HotelRepository : IHotelRepository
     {
-        //public HotelRepository(HotelDbContext dbContext)
-        //{
-        //    hotelDb = dbContext;
-        //}
-        private readonly HotelDbContext hotelDb = new HotelDbContext();
+        private readonly HotelDbContext hotelDb;
+        //private readonly HotelDbContext hotelDb = new HotelDbContext();
+        public HotelRepository(HotelDbContext dbContext)
+        {
+            hotelDb = dbContext;
+        }
+
         public Hotel CreateHotel(Hotel hotel)
         {
             hotelDb.Hotels.Add(hotel);
