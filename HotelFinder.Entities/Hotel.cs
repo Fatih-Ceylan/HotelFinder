@@ -9,6 +9,6 @@ namespace HotelFinder.Entities
         [StringLength(50)]
         public string Name { get; set; }
         [StringLength(50)]
-        public int City { get; set; }
+        public string City { get; set; }
     }
 }

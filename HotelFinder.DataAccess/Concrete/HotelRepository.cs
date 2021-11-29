@@ -45,6 +45,7 @@ namespace HotelFinder.DataAccess.Concrete
         public Hotel UpdateHotel(Hotel hotel)
         {
             hotelDb.Hotels.Update(hotel);
+            hotelDb.SaveChanges();
             return hotel;
         }
     }
